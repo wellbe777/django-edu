@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block title %}Order details{% endblock %}
+
+{% block content %}
+
+    <div class="container-fluid">
+        {% if orderitems %}
+        <div class="table-responsive text-nowrap">
+
+            <h2 style="font-weight:bold;text-align:center;">Details for order {{ order.id }}:</h2>
+            
+            <div class="row">
+                <div class="col">
+                    <table class="table">
+                        <thead class="table-primary">
+                            <tr>
+                                <th scope="col" style="background-color: #1C2140;">#</th>
+                                <th scope="col" style="background-color: #1C2140;">Logo</th>
+                                <th scope="col" style="background-color: #1C2140;">Course Title</th>
+                                <th scope="col" style="background-color: #1C2140;">Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        {% for it in orderitems %}
+                            <tr>
+                                <th scope="row">{{ forloop.counter }}</th>
+                                <td><img src="{{ it.course.image.url }}" class="img-fluid" alt="" style="width:10%"></td>
+                                <td>{{ it.course.title }}</td>
+                                <td>${{ it.course.price }}</td>                                
+                            </tr>
+                        {% endfor %}
+
+                        </tbody>
+                    </table>
+                </div>                
+            </div>
+        {% else %}
+            <h2 style="font-weight:bold;text-align:center">You have no unpaid courses {{ user.username }}</h2>   
+        {% endif %} 
+    </div>
+
+{% endblock content %}

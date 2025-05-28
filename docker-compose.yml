@@ -1,0 +1,45 @@
+services:
+
+  db:
+    image: postgres:17.4
+    restart: always
+    volumes:
+      - ./pgdata17/db:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=edu
+      - POSTGRES_USER=eduser
+      - POSTGRES_PASSWORD=edu22
+      
+  memcached:
+    image: memcached:latest
+    restart: always
+    volumes:
+      - ./data/cache:/data
+    ports:
+      - "11212:11211"
+
+  web:
+    build: . 
+    command: ["./wait-for-it.sh", "db:5432", "--",
+              "uwsgi", "--ini", "/app/uwsgi/uwsgi.ini"]
+    restart: always
+    volumes:
+      - .:/app
+    environment:
+      - DJANGO_SETTINGS_MODULE=edu.settings.prod
+      - POSTGRES_DB=edu
+      - POSTGRES_USER=eduser
+      - POSTGRES_PASSWORD=edu22
+    depends_on:
+      - db
+      - memcached
+      
+  nginx:
+    image: nginx:1.28.0
+    restart: always
+    volumes:
+      - ./nginx:/etc/nginx/templates
+      - .:/app
+    ports:
+      - "80:80"
+      - "443:443"

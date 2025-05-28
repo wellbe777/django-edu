@@ -1,0 +1,34 @@
+{% load i18n %}
+<ul class="dropdown-menu fade-down m-0" >  
+    {% for cat in categoryitems %}
+    <li> 
+        {% if cat.subject_set.all %}                          
+        <a class="dropdown-item" href="{% url 'courses:category-detail' cat.slug %}" id="{{ cat.id }}">{{ cat.title }} &raquo;</a> 
+        {% else %}                           
+        <a class="dropdown-item" href="{% url 'courses:category-detail' cat.slug %}" id="{{ cat.id }}">{{ cat.title }}</a>  
+        {% endif %}  
+            <ul class="dropdown-menu dropdown-submenu"> 
+            {% for sub in cat.subject_set.all %}
+                <li>
+                    {% if sub.course_set.all %}
+                    <a class="dropdown-item" href="{% url 'courses:subject-detail' sub.slug %}" id="{{ sub.id }}">{% trans "Subject" %} - {{ sub.title }} &raquo;</a>
+                    {% else %}
+                    <a class="dropdown-item" href="{% url 'courses:subject-detail' sub.slug %}" id="{{ sub.id }}">{% trans "Subject" %} - {{ sub.title }}</a>
+                    {% endif %}
+                    <ul class="dropdown-menu dropdown-submenu">
+                        <li>
+                        {% for cor in sub.course_set.all %}  
+                            <a class="dropdown-item" href="{% url 'courses:course_detail' cor.slug %}" id="{{ cor.id }}">{% trans "Course" %} - {{ cor.title }}</a>                              
+                        {% endfor %}
+                        </li>
+                    </ul> 
+                </li>  
+            {% endfor %}
+            </ul>                          
+    </li>
+    {% endfor %}
+    
+  <li>
+      <a class="dropdown-item" href="{% url 'courses:course_list' %}">{% trans "All Courses" %}</a>   <!-- courses.html -->
+  </li>
+</ul>  

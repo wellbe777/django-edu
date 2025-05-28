@@ -1,0 +1,713 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-01-14 03:20+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
+"(n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: courses/models.py:26
+msgid "category title"
+msgstr "категория"
+
+#: courses/models.py:52
+msgid "subject title"
+msgstr "предмет"
+
+#: courses/models.py:72
+msgid "course title"
+msgstr "курс"
+
+#: courses/templates/account/account_inactive.html:5
+#: courses/templates/account/account_inactive.html:8
+msgid "Account Inactive"
+msgstr ""
+
+#: courses/templates/account/account_inactive.html:10
+msgid "This account is inactive."
+msgstr ""
+
+#: courses/templates/account/email.html:6
+#: courses/templates/account/email.html:22
+msgid "E-mail Addresses"
+msgstr ""
+
+#: courses/templates/account/email.html:24
+msgid "The following e-mail addresses are associated with your account:"
+msgstr ""
+
+#: courses/templates/account/email.html:38
+msgid "Verified"
+msgstr ""
+
+#: courses/templates/account/email.html:40
+msgid "Unverified"
+msgstr ""
+
+#: courses/templates/account/email.html:42
+msgid "Primary"
+msgstr ""
+
+#: courses/templates/account/email.html:48
+msgid "Make Primary"
+msgstr ""
+
+#: courses/templates/account/email.html:49
+msgid "Re-send Verification"
+msgstr ""
+
+#: courses/templates/account/email.html:50
+#: courses/templates/socialaccount/connections.html:35
+msgid "Remove"
+msgstr ""
+
+#: courses/templates/account/email.html:57
+msgid "Warning:"
+msgstr ""
+
+#: courses/templates/account/email.html:57
+msgid ""
+"You currently do not have any e-mail address set up. You should really add "
+"an e-mail address so you can receive notifications, reset your password, etc."
+msgstr ""
+
+#: courses/templates/account/email.html:62
+msgid "Add E-mail Address"
+msgstr ""
+
+#: courses/templates/account/email.html:67
+msgid "Add E-mail"
+msgstr ""
+
+#: courses/templates/account/email.html:82
+msgid "Do you really want to remove the selected e-mail address?"
+msgstr ""
+
+#: courses/templates/account/email/email_confirmation_message.txt:1
+#, python-format
+msgid ""
+"Hello from %(site_name)s!\n"
+"\n"
+"You're receiving this e-mail because user %(user_display)s has given yours "
+"as an e-mail address to connect their account.\n"
+"\n"
+"To confirm this is correct, go to %(activate_url)s\n"
+msgstr ""
+
+#: courses/templates/account/email/email_confirmation_message.txt:7
+#, python-format
+msgid ""
+"Thank you from %(site_name)s!\n"
+"%(site_domain)s"
+msgstr ""
+
+#: courses/templates/account/email/email_confirmation_subject.txt:3
+msgid "Please Confirm Your E-mail Address"
+msgstr ""
+
+#: courses/templates/account/email/password_reset_key_message.txt:1
+#, python-format
+msgid ""
+"Hello from %(site_name)s!\n"
+"\n"
+"You're receiving this e-mail because you or someone else has requested a "
+"password for your user account.\n"
+"It can be safely ignored if you did not request a password reset. Click the "
+"link below to reset your password."
+msgstr ""
+
+#: courses/templates/account/email/password_reset_key_message.txt:8
+#, python-format
+msgid "In case you forgot, your username is %(username)s."
+msgstr ""
+
+#: courses/templates/account/email/password_reset_key_message.txt:10
+#, python-format
+msgid ""
+"Thank you for using %(site_name)s!\n"
+"%(site_domain)s"
+msgstr ""
+
+#: courses/templates/account/email/password_reset_key_subject.txt:3
+msgid "Password Reset E-mail"
+msgstr ""
+
+#: courses/templates/account/email_confirm.html:6
+#: courses/templates/account/email_confirm.html:10
+msgid "Confirm E-mail Address"
+msgstr ""
+
+#: courses/templates/account/email_confirm.html:16
+#, python-format
+msgid ""
+"Please confirm that <a href=\"mailto:%(email)s\">%(email)s</a> is an e-mail "
+"address for user %(user_display)s."
+msgstr ""
+
+#: courses/templates/account/email_confirm.html:20
+msgid "Confirm"
+msgstr ""
+
+#: courses/templates/account/email_confirm.html:27
+#, python-format
+msgid ""
+"This e-mail confirmation link expired or is invalid. Please <a "
+"href=\"%(email_url)s\">issue a new e-mail confirmation request</a>."
+msgstr ""
+
+#: courses/templates/account/login.html:7
+#: courses/templates/account/login.html:21
+#: courses/templates/account/login.html:57
+msgid "Sign In"
+msgstr ""
+
+#: courses/templates/account/login.html:26
+#, python-format
+msgid ""
+"Please sign in with one\n"
+"            of your existing third party accounts. Or, <a "
+"href=\"%(signup_url)s\">sign up</a>\n"
+"            for a %(site_name)s account and sign in below:"
+msgstr ""
+
+#: courses/templates/account/login.html:36
+msgid "or"
+msgstr ""
+
+#: courses/templates/account/login.html:43
+#, python-format
+msgid ""
+"If you have not created an account yet, then please\n"
+"            <a href=\"%(signup_url)s\">sign up</a> first."
+msgstr ""
+
+#: courses/templates/account/login.html:60
+msgid "Forgot Password?"
+msgstr ""
+
+#: courses/templates/account/logout.html:5
+#: courses/templates/account/logout.html:19
+#: courses/templates/account/logout.html:28
+msgid "Sign Out"
+msgstr ""
+
+#: courses/templates/account/logout.html:21
+msgid "Are you sure you want to sign out?"
+msgstr ""
+
+#: courses/templates/account/messages/cannot_delete_primary_email.txt:2
+#, python-format
+msgid "You cannot remove your primary e-mail address (%(email)s)."
+msgstr ""
+
+#: courses/templates/account/messages/email_confirmation_sent.txt:2
+#, python-format
+msgid "Confirmation e-mail sent to %(email)s."
+msgstr ""
+
+#: courses/templates/account/messages/email_confirmed.txt:2
+#, python-format
+msgid "You have confirmed %(email)s."
+msgstr ""
+
+#: courses/templates/account/messages/email_deleted.txt:2
+#, python-format
+msgid "Removed e-mail address %(email)s."
+msgstr ""
+
+#: courses/templates/account/messages/logged_in.txt:4
+#, python-format
+msgid "Successfully signed in as %(name)s."
+msgstr ""
+
+#: courses/templates/account/messages/logged_out.txt:2
+msgid "You have signed out."
+msgstr ""
+
+#: courses/templates/account/messages/password_changed.txt:2
+msgid "Password successfully changed."
+msgstr ""
+
+#: courses/templates/account/messages/password_set.txt:2
+msgid "Password successfully set."
+msgstr ""
+
+#: courses/templates/account/messages/primary_email_set.txt:2
+msgid "Primary e-mail address set."
+msgstr ""
+
+#: courses/templates/account/messages/unverified_primary_email.txt:2
+msgid "Your primary e-mail address must be verified."
+msgstr ""
+
+#: courses/templates/account/password_change.html:6
+#: courses/templates/account/password_change.html:20
+#: courses/templates/account/password_change.html:25
+#: courses/templates/account/password_reset_from_key.html:4
+#: courses/templates/account/password_reset_from_key.html:7
+#: courses/templates/account/password_reset_from_key_done.html:4
+#: courses/templates/account/password_reset_from_key_done.html:7
+msgid "Change Password"
+msgstr ""
+
+#: courses/templates/account/password_reset.html:6
+#: courses/templates/account/password_reset.html:10
+#: courses/templates/account/password_reset_done.html:6
+#: courses/templates/account/password_reset_done.html:9
+msgid "Password Reset"
+msgstr ""
+
+#: courses/templates/account/password_reset.html:15
+msgid ""
+"Forgotten your password? Enter your e-mail address below, and we'll send you "
+"an e-mail allowing you to reset it."
+msgstr ""
+
+#: courses/templates/account/password_reset.html:20
+msgid "Reset My Password"
+msgstr ""
+
+#: courses/templates/account/password_reset.html:23
+msgid "Please contact us if you have any trouble resetting your password."
+msgstr ""
+
+#: courses/templates/account/password_reset_done.html:15
+msgid ""
+"We have sent you an e-mail. Please contact us if you do not receive it "
+"within a few minutes."
+msgstr ""
+
+#: courses/templates/account/password_reset_from_key.html:7
+msgid "Bad Token"
+msgstr ""
+
+#: courses/templates/account/password_reset_from_key.html:11
+#, python-format
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used.  Please request a <a href=\"%(passwd_reset_url)s\">new password reset</"
+"a>."
+msgstr ""
+
+#: courses/templates/account/password_reset_from_key.html:17
+msgid "change password"
+msgstr ""
+
+#: courses/templates/account/password_reset_from_key.html:20
+#: courses/templates/account/password_reset_from_key_done.html:8
+msgid "Your password is now changed."
+msgstr ""
+
+#: courses/templates/account/password_set.html:5
+#: courses/templates/account/password_set.html:8
+#: courses/templates/account/password_set.html:13
+msgid "Set Password"
+msgstr ""
+
+#: courses/templates/account/signup.html:6 courses/templates/navbar.html:69
+#: courses/templates/navbar_old.html:61
+#: courses/templates/socialaccount/signup.html:5
+msgid "Signup"
+msgstr ""
+
+#: courses/templates/account/signup.html:20
+#: courses/templates/account/signup.html:32
+#: courses/templates/socialaccount/signup.html:8
+#: courses/templates/socialaccount/signup.html:19
+msgid "Sign Up"
+msgstr "Зарегистрироваться"
+
+#: courses/templates/account/signup.html:22
+#, python-format
+msgid ""
+"Already have an account? Then please <a href=\"%(login_url)s\">sign\n"
+"              in</a>."
+msgstr ""
+
+#: courses/templates/account/signup_closed.html:5
+#: courses/templates/account/signup_closed.html:8
+msgid "Sign Up Closed"
+msgstr ""
+
+#: courses/templates/account/signup_closed.html:10
+msgid "We are sorry, but the sign up is currently closed."
+msgstr ""
+
+#: courses/templates/account/snippets/already_logged_in.html:5
+msgid "Note"
+msgstr ""
+
+#: courses/templates/account/snippets/already_logged_in.html:5
+#, python-format
+msgid "you are already logged in as %(user_display)s."
+msgstr ""
+
+#: courses/templates/account/verification_sent.html:5
+#: courses/templates/account/verification_sent.html:8
+#: courses/templates/account/verified_email_required.html:5
+#: courses/templates/account/verified_email_required.html:8
+msgid "Verify Your E-mail Address"
+msgstr ""
+
+#: courses/templates/account/verification_sent.html:10
+msgid ""
+"We have sent an e-mail to you for verification. Follow the link provided to "
+"finalize the signup process. Please contact us if you do not receive it "
+"within a few minutes."
+msgstr ""
+
+#: courses/templates/account/verified_email_required.html:12
+msgid ""
+"This part of the site requires us to verify that\n"
+"you are who you claim to be. For this purpose, we require that you\n"
+"verify ownership of your e-mail address. "
+msgstr ""
+
+#: courses/templates/account/verified_email_required.html:16
+msgid ""
+"We have sent an e-mail to you for\n"
+"verification. Please click on the link inside this e-mail. Please\n"
+"contact us if you do not receive it within a few minutes."
+msgstr ""
+
+#: courses/templates/account/verified_email_required.html:20
+#, python-format
+msgid ""
+"<strong>Note:</strong> you can still <a href=\"%(email_url)s\">change your e-"
+"mail address</a>."
+msgstr ""
+
+#: courses/templates/courses/course/list.html:18
+msgid "All courses"
+msgstr "Все Курсы"
+
+#: courses/templates/courses/course/list.html:22
+msgid "Subjects"
+msgstr "Предметы"
+
+#: courses/templates/courses/course/list.html:25
+msgid "All"
+msgstr "Все"
+
+#: courses/templates/home.html:26 courses/templates/home.html:42
+msgid "EDU Online Courses"
+msgstr "ОНЛАЙН КУРСЫ"
+
+#: courses/templates/home.html:27
+msgid "Online Learning Platform"
+msgstr "Обучающая Платформа"
+
+#: courses/templates/home.html:28 courses/templates/home.html:44
+msgid "We bring the best to our clients"
+msgstr "Мы даем лучшее нашим клиентам"
+
+#: courses/templates/home.html:29 courses/templates/home.html:45
+#: courses/templates/home.html:145
+msgid "Read More"
+msgstr "Узнать Больше"
+
+#: courses/templates/home.html:30 courses/templates/home.html:46
+msgid "Join Us Now"
+msgstr "Регистрируйтесь сейчас"
+
+#: courses/templates/home.html:43
+msgid "You Can Get Educated Online Right From Your Home"
+msgstr "Вы можете получить образование не выходя из дома"
+
+#: courses/templates/home.html:66
+msgid "Professional Instructors"
+msgstr "Профессиональные Инструкторы"
+
+#: courses/templates/home.html:67
+msgid "We have certified professional teachers"
+msgstr "У нас сертифицированные преподаватели"
+
+#: courses/templates/home.html:77 courses/templates/home.html:158
+#: courses/templates/navbar.html:10 courses/templates/navbar_old.html:10
+msgid "Categories"
+msgstr "Категории"
+
+#: courses/templates/home.html:78
+msgid "We provide courses in different categories"
+msgstr "Мы предлагаем курсы в разных категориях"
+
+#: courses/templates/home.html:88 courses/templates/home.html:130
+msgid "Online Courses"
+msgstr "Онлайн Курсы"
+
+#: courses/templates/home.html:89
+msgid "Full list of our online courses"
+msgstr "Полный лист онлайн курсов"
+
+#: courses/templates/home.html:99
+msgid "Most Popular Courses"
+msgstr "Самые Популярные Курсы"
+
+#: courses/templates/home.html:100
+msgid "Most pupular courses among students"
+msgstr "Наиболее популярные курсы среди студентов"
+
+#: courses/templates/home.html:121
+#, fuzzy
+#| msgid "About"
+msgid "About Us"
+msgstr "О Нас"
+
+#: courses/templates/home.html:122
+msgid "Welcome to EDU"
+msgstr "Добро пожаловать в EDU"
+
+#: courses/templates/home.html:123
+msgid "We provide high quality online educational services."
+msgstr "Мы обеспечиваем высококачественное образование."
+
+#: courses/templates/home.html:124
+msgid ""
+"Our goal is to bring affordable, high quality education right into your home."
+msgstr ""
+"Наша цель дать вам доступное высококачественное образование прямо из дома."
+
+#: courses/templates/home.html:127
+msgid "Certified Instructors"
+msgstr "Сертифицированные преподаватели"
+
+#: courses/templates/home.html:133
+msgid "Google SEO Certificate"
+msgstr "Google SEO Сертификат"
+
+#: courses/templates/home.html:136
+msgid "Degrees"
+msgstr "Степени"
+
+#: courses/templates/home.html:139
+msgid "Our Partners"
+msgstr "Наши Партнеры"
+
+#: courses/templates/home.html:142
+msgid "International Certificates"
+msgstr "Интернациональные Сертификаты"
+
+#: courses/templates/home.html:159
+msgid "Courses Categories"
+msgstr "Категории и Курсы"
+
+#: courses/templates/home.html:230
+msgid "Courses"
+msgstr "Курсы"
+
+#: courses/templates/home.html:231
+msgid "Popular Courses"
+msgstr "Популярные Курсы"
+
+#: courses/templates/home.html:284
+msgid "Instructors"
+msgstr "Преподаватели"
+
+#: courses/templates/home.html:285
+msgid "EDU Instructors"
+msgstr "EDU Преподаватели"
+
+#: courses/templates/home.html:302
+msgid "Web Development"
+msgstr "Веб-разработка"
+
+#: courses/templates/home.html:320
+msgid "Design, Video Editing"
+msgstr "Дизайн, Видеомонтаж"
+
+#: courses/templates/home.html:338
+msgid "Digital Marketing"
+msgstr "Цифровой Маркетинг"
+
+#: courses/templates/home.html:356
+msgid "Market Research, Advertising"
+msgstr "Маркетинговые Исследования, Реклама"
+
+#: courses/templates/home.html:370 courses/templates/navbar.html:76
+#: courses/templates/navbar_old.html:68
+msgid "Reviews"
+msgstr "Отзывы"
+
+#: courses/templates/home.html:371
+msgid "Students Feedback"
+msgstr "Отзывы Студентов"
+
+#: courses/templates/home.html:377
+msgid "Web designer"
+msgstr "Веб-дизайнер"
+
+#: courses/templates/home.html:379
+msgid "These courses were really helpful. I recommend EDU to all."
+msgstr "Эти курсы были действительно полезны. Я рекомендую EDU всем."
+
+#: courses/templates/home.html:385
+msgid "Web Developer"
+msgstr "Веб-разработчик"
+
+#: courses/templates/home.html:387
+msgid "Very skillful teachers and great support."
+msgstr "Очень опытные преподаватели и отличная поддержка."
+
+#: courses/templates/home.html:393
+msgid "Retail store owner"
+msgstr "Владелец розничного магазина"
+
+#: courses/templates/home.html:395
+msgid ""
+"I thought it would be difficult for me to learn at my age, but with their "
+"help I believed in myself once again."
+msgstr ""
+"Я думала, что в моем возрасте мне будет трудно учиться, но с их помощью я "
+"снова поверила в себя."
+
+#: courses/templates/home.html:401
+msgid "Marketing manager"
+msgstr "Менеджер по маркетингу"
+
+#: courses/templates/home.html:403
+msgid "Wonderful people! Great courses!"
+msgstr "Замечательные люди! Отличные курсы!"
+
+#: courses/templates/menu.html:14 courses/templates/menu.html:16
+msgid "Subject"
+msgstr "Предмет"
+
+#: courses/templates/menu.html:21
+msgid "Course"
+msgstr "Курс"
+
+#: courses/templates/menu.html:32
+msgid "All Courses"
+msgstr "Все Курсы"
+
+#: courses/templates/navbar.html:23 courses/templates/navbar_old.html:24
+msgid "Profile"
+msgstr "Профиль"
+
+#: courses/templates/navbar.html:24 courses/templates/navbar_old.html:25
+msgid "Logout"
+msgstr "Выйти"
+
+#: courses/templates/navbar.html:26 courses/templates/navbar_old.html:27
+msgid "Login"
+msgstr "Войти"
+
+#: courses/templates/navbar.html:32
+msgid "Search courses"
+msgstr "Поиск курсов"
+
+#: courses/templates/navbar.html:46 courses/templates/navbar_old.html:38
+msgid "Home"
+msgstr "Главная"
+
+#: courses/templates/navbar.html:47 courses/templates/navbar_old.html:39
+msgid "About"
+msgstr "О Нас"
+
+#: courses/templates/navbar.html:63 courses/templates/navbar_old.html:55
+msgid "Cart"
+msgstr "Корзина"
+
+#: courses/templates/navbar.html:73 courses/templates/navbar_old.html:65
+msgid "Pages"
+msgstr "Страницы"
+
+#: courses/templates/navbar.html:75 courses/templates/navbar_old.html:67
+msgid "Our Team"
+msgstr "Наша Команда"
+
+#: courses/templates/navbar.html:77 courses/templates/navbar_old.html:69
+msgid "404 Page"
+msgstr "Страница Не Найдена"
+
+#: courses/templates/navbar.html:80 courses/templates/navbar_old.html:72
+msgid "Contact"
+msgstr "Контакты"
+
+#: courses/templates/openid/login.html:9
+msgid "OpenID Sign In"
+msgstr ""
+
+#: courses/templates/socialaccount/authentication_error.html:5
+#: courses/templates/socialaccount/authentication_error.html:8
+msgid "Social Network Login Failure"
+msgstr ""
+
+#: courses/templates/socialaccount/authentication_error.html:10
+msgid ""
+"An error occurred while attempting to login via your social network account."
+msgstr ""
+
+#: courses/templates/socialaccount/connections.html:5
+#: courses/templates/socialaccount/connections.html:8
+msgid "Account Connections"
+msgstr ""
+
+#: courses/templates/socialaccount/connections.html:11
+msgid ""
+"You can sign in to your account using any of the following third party "
+"accounts:"
+msgstr ""
+
+#: courses/templates/socialaccount/connections.html:43
+msgid ""
+"You currently have no social network accounts connected to this account."
+msgstr ""
+
+#: courses/templates/socialaccount/connections.html:46
+msgid "Add a 3rd Party Account"
+msgstr ""
+
+#: courses/templates/socialaccount/login_cancelled.html:5
+#: courses/templates/socialaccount/login_cancelled.html:9
+msgid "Login Cancelled"
+msgstr ""
+
+#: courses/templates/socialaccount/login_cancelled.html:13
+#, python-format
+msgid ""
+"You decided to cancel logging in to our site using one of your existing "
+"accounts. If this was a mistake, please proceed to <a "
+"href=\"%(login_url)s\">sign in</a>."
+msgstr ""
+
+#: courses/templates/socialaccount/messages/account_connected.txt:2
+msgid "The social account has been connected."
+msgstr ""
+
+#: courses/templates/socialaccount/messages/account_connected_other.txt:2
+msgid "The social account is already connected to a different account."
+msgstr ""
+
+#: courses/templates/socialaccount/messages/account_disconnected.txt:2
+msgid "The social account has been disconnected."
+msgstr ""
+
+#: courses/templates/socialaccount/signup.html:10
+#, python-format
+msgid ""
+"You are about to use your %(provider_name)s account to login to\n"
+"%(site_name)s. As a final step, please complete the following form:"
+msgstr ""
+
+#, fuzzy
+#~| msgid "EDU ONLINE COURSES"
+#~ msgid "EDU ONLINE COURSES"
+#~ msgstr "ОНЛАЙН КУРСЫ"
+
+#~ msgid "EDU ONLINE COURSES2"
+#~ msgstr "ОНЛАЙН КУРСЫ"

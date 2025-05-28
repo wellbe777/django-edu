@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}My courses{% endblock %} 
+
+{% block content %}
+<div class="row">
+  <div class="col-1"></div>
+  <div class="col-5"><h3>My courses</h3></div>
+  <div class="col-3"><h5><a href="{% url 'courses:account-profile' %}">Back to profile</a></h5></div>
+  <div class="col-3"></div>
+</div>
+
+  <div class="container-fluid">      <!-- class="module" -->
+    <div class="row">
+      {% for course in object_list %}
+        <div class="course-info"> 
+          
+            <div class="col">
+              <h3><span> <img src="{{ course.image.url }}" class="img-fluid" alt="" style="width:10%"></span> {{ course.title }}</h3>
+              <p>
+                <a href="{% url 'courses:course_edit' course.id %}">Edit</a>
+                <a href="{% url 'courses:course_delete' course.id %}">Delete</a>
+                <a href="{% url 'courses:course_module_update' course.id %}">Edit modules</a>
+                {% if course.modules.count > 0 %}
+                  <a href="{% url 'courses:module_content_list' course.modules.first.id %}">Manage contents</a>
+                {% endif %}
+              </p>
+            </div>
+        </div> 
+      {% empty %}
+        <p>You haven't created any courses yet.</p>
+      {% endfor %}
+    </div>
+    <p>
+      <a href="{% url 'courses:course_create' %}" class="button">Create new course</a>
+    </p>
+  </div>
+{% endblock %}

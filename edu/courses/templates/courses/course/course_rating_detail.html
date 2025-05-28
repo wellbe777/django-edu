@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+{% load static %}
+
+{% block content %}
+
+    <div class="container-fluid">
+        <h4>Current ratings of {{ course_detail_review.title }} course:</h4> 
+
+            <div class="review-feedback">
+                <span class="fa fa-star" {% if course_detail_review.averagereview > 0 %} style='color: #f3da35' {% endif %}></span>
+                <span class="fa fa-star" {% if course_detail_review.averagereview > 1 %} style='color: #f3da35' {% endif %}"></span>
+                <span class="fa fa-star" {% if course_detail_review.averagereview > 2 %} style='color: #f3da35' {% endif %}"></span>
+                <span class="fa fa-star" {% if course_detail_review.averagereview > 3 %} style='color: #f3da35' {% endif %}"></span>
+                <span class="fa fa-star" {% if course_detail_review.averagereview > 4 %} style='color: #f3da35' {% endif %}"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                {{course_detail_review.averagereview | stringformat:".2f"}}
+            </div>
+
+    </div>
+
+{% endblock content %}

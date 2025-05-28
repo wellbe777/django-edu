@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>{{ subject.title }} subject courses:</h2>
+
+    {% for cor in subject.course_set.all %}
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Course:<a href="{% url 'courses:course_detail' cor.slug %}" id="{{ cor.id }}">&nbsp;&nbsp;{{ cor.title }}</p></a>
+    {% endfor %}
+{% endblock content %}

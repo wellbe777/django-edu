@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>{{ category.title }} category courses:</h2>
+
+    {% for cat in category.subject_set.all %}
+
+        <p><strong>&nbsp;&nbsp;Subject title: <a href="{% url 'courses:subject-detail' cat.slug %}" id="{{ cat.id }}"> {{ cat.title }}</strong></p></a>
+        {% for sub in cat.course_set.all %}
+	    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Course: &nbsp;&nbsp;<a href="{% url 'courses:course_detail' sub.slug %}" id="{{ sub.id }}">{{ sub.title }}</p></a>
+	 {% endfor %}
+    {% endfor %}
+
+{% endblock content %}

@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}My courses{% endblock %}
+
+{% block content %}
+
+  <div class="row">
+    <div class="col-1"></div>
+    <div class="col-5"><h3>My courses</h3></div>
+    <div class="col-3"><h5><a href="{% url 'courses:account-profile' %}">Back to profile</a></h5></div>
+    <div class="col-3"></div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+      {% for item in orderitems %}      	
+        <div class="course-info">
+          <h3><span> <img src="{{ item.course.image.url }}" class="img-fluid" alt="" style="width:10%"></span> {{ item.course.title }}</h3>
+          <p><a href="{% url 'orders:student_course_detail' item.course.id %}"><button type="button" class="btn btn-dark">Access contents</button></a></p>  
+          <p><a href="{% url 'courses:course_rate_detail' item.course.id %}"><button type="button" class="btn btn-dark">Rate this course</button></a></p> 
+          <p><a href="{% url 'courses:course_detail_review' item.course.id %}"><button type="button" class="btn btn-dark">See the ratings</button></a></p>  
+        </div>        
+      {% empty %}
+        <p>
+          You are not enrolled in any courses yet.
+          <a href="{% url 'courses:course_list' %}"><button type="button" class="btn btn-dark">Browse courses</button></a>
+          to enroll in a course. 
+        </p>        
+      {% endfor %}      
+            
+    </div>
+  </div>
+{% endblock %}

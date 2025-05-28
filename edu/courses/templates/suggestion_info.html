@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+
+{% block content %}
+<div class="container">
+    <h2>{{ item.title }}</h2>
+    <p>{{ item.overview }}</p>
+    
+    <h3>
+          <a href="{% url 'courses:course_detail' item.slug %}">
+            <span> <img src="{{ item.image.url }}" class="img-fluid" alt="" style="width:10%"></span> {{ item.title }} 
+          </a> 
+    </h3>
+</div>
+
+
+{% endblock %}
+
+

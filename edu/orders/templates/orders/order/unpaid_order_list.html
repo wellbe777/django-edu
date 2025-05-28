@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block title %}Unpaid orders list{% endblock %}
+
+{% block content %}
+
+    <div class="container-fluid">
+        {% if order_list %}
+        <div class="table-responsive text-nowrap">
+
+            <h2 style="font-weight:bold;text-align:center;">These are your unpaid orders {{ user.username }}:</h2>
+            
+            <div class="row">
+                <div class="col">
+                    <table class="table">
+                        <thead class="table-primary">
+                            <tr>
+                                <th scope="col" style="background-color: #1C2140;">#</th>
+                                <th scope="col" style="background-color: #1C2140;">Order Date</th>
+                                <th scope="col" style="background-color: #1C2140;">Order ID</th>
+                                <th scope="col" style="background-color: #1C2140;">Total Amount</th>
+                                <th scope="col" style="background-color: #1C2140;">Order Details</th>
+                                <th scope="col" style="background-color: #1C2140;">Make Payment</th>                        
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        {% for ord in order_list %}
+                            <tr>
+                                <th scope="row">{{ forloop.counter }}</th>
+                                <td>{{ ord.created }}</td>
+                                <td>{{ ord.id }}</td>
+                                <td>${{ ord.get_total_cost }}</td>
+                                <td><a href="{% url 'orders:order_detail' ord.id%}" style="color: #0065cc">Click here to view details</a></td>
+                                <td><a href="{% url 'orders:unpaid_order_process' ord.id %}"><button type="button" class="btn btn-dark">Pay Now</button></a></td>
+                            </tr>
+                        {% endfor %}
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        {% else %}
+            <h2 style="font-weight:bold;text-align:center">You have no unpaid orders {{ user.username }}</h2>   
+        {% endif %} 
+    </div>
+
+{% endblock content %}

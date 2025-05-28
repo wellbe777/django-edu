@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+{% load static %}
+
+{% block content %}
+
+    <div class="container-fluid">
+            <h4>You rated course: {{ reviewed_course.course.title }}</h4> 
+            <p>Subject: {{ reviewed_course.subject }}</p>
+            <p>Comment: {{ reviewed_course.comment }}</p>
+            <p>Rate = {{ reviewed_course.rate }}</p>
+        
+            <div class="review-feedback">
+                    {% if reviewed_course.rate == 5 %}
+                        <span class="fa fa-star" style='color: #f3da35'></span>
+                        <span class="fa fa-star" style='color: #f3da35'></span>
+                        <span class="fa fa-star" style='color: #f3da35'></span>
+                        <span class="fa fa-star" style='color: #f3da35'></span>
+                        <span class="fa fa-star" style='color: #f3da35'></span>
+                    {% elif reviewed_course.rate == 4 %}
+                        <span class="fa fa-star" style='color: #f3da35'></span>
+                        <span class="fa fa-star" style='color: #f3da35'></span>
+                        <span class="fa fa-star" style='color: #f3da35'></span>
+                        <span class="fa fa-star" style='color: #f3da35'></span>
+                        <span class="fa fa-star"></span>
+                    {% elif reviewed_course.rate == 3 %} 
+                        <span class="fa fa-star" style='color: #f3da35'></span>
+                        <span class="fa fa-star" style='color: #f3da35'></span>
+                        <span class="fa fa-star" style='color: #f3da35'></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span> 
+                    {% elif reviewed_course.rate == 2 %} 
+                        <span class="fa fa-star" style='color: #f3da35'></span>
+                        <span class="fa fa-star" style='color: #f3da35'></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span> 
+                    {% else %}
+                        <span class="fa fa-star" style='color: #f3da35'></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span> 
+                    {% endif %}
+                    
+            </div>
+    </div>
+
+{% endblock content %}

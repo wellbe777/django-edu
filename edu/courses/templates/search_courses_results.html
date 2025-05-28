@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="module">
+    {% for course in object_list %}
+      {% with subject=course.subject %}
+        <h3>
+          <a href="{% url 'courses:course_detail' course.slug %}">
+            <span> <img src="{{ course.image.url }}" class="img-fluid" alt="" style="width:10%"></span> {{ course.title }} 
+          </a> 
+        </h3>
+        <p>
+          <a href="{% url 'courses:course_list_subject' subject.slug %}">{{ subject }}</a>.
+             <!-- course.total_modules }} modules. -->
+            <!-- course.coursemodules course.title }} modules. -->
+            Instructor: {{ course.owner.get_full_name }}. Price: ${{ course.price }}
+        </p>
+      {% endwith %}
+    {% endfor %}
+  </div>
+
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<div class="container-fluid">
+    <form method="POST">  <!--action="/en/accounts/profile/name-change/"-->
+      <fieldset>
+        <legend>Name change form</legend>
+        {% csrf_token %}
+        {{ form|crispy }} 
+        <!--{{ form.as_p }} -->
+        <!--<input class="btn btn-btn-dark" type="submit" value="Submit" /> -->
+        <button type="submit" class="btn btn-dark">Submit</button>
+      </fieldset>
+    </form>
+</div>
+
+<p> <pre> <a href="{% url 'courses:account-profile' %}">    Back to your profile </a> </pre> </p>
+
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+{% endblock content %}

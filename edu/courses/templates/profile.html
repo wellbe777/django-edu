@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="container-fluid"> <!-- mt-5 -->
+  <h5 class="text-center pt-2">Hi, {{ user.first_name }}  {{ user.last_name }}. User name: {{ user.username }}.
+      {% if user.groups.all.0.name == 'Instructors' %} 
+        Status: instructor
+      {% else %}
+        Status: student
+      {% endif %} 
+  </h5>  
+
+  <div class="row">
+    <div class="col-2">
+      <div class="img-fluid">
+      <!--<div class="nav">-->
+        <div class="hovereffect pb-2">                      
+            <img src="{{ user.userprofile.image.url }}" alt="No Image" style="width:100%">
+            <div class="overlay">
+                <p><a href="{% url 'courses:image-upload' %}">Upload photo</a></p>
+                <p><a href="{% url 'courses:image-upload' %}">Upload photo</a></p> 
+            </div>
+            <!--<div class="text-center">  class="caption" class="rounded-circle"
+              <p>Your picture</p> 
+            </div> -->
+        </div>
+        <a href="{% url 'courses:image-upload' %}">Upload photo</a>
+      </div>
+    </div>    
+    
+    <div class="col-10">  <!-- pt-4 -->
+        {% if unpaidorders or paidorders %}
+        <div class="table-responsive text-nowrap">
+
+          <h4 style="font-weight:bold;text-align:left;">Your orders:</h4> 
+            <div class="row">
+                <div class="col">
+                    <table class="table">
+                        <thead class="table-primary">
+                            <tr>
+                                <th scope="col" style="background-color: #1C2140;">#</th>
+                                <th scope="col" style="background-color: #1C2140;">Order Date</th>
+                                <th scope="col" style="background-color: #1C2140;">Order ID</th>
+                                <th scope="col" style="background-color: #1C2140;">Total Amount</th>
+                                <th scope="col" style="background-color: #1C2140;">Order Details</th>
+                                <th scope="col" style="background-color: #1C2140;">Payment</th>
+                                <th scope="col" style="background-color: #1C2140;">Remove</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        {% for ord in unpaidorders %}
+                            <tr>
+                                <th scope="row">{{ forloop.counter }}</th>
+                                <td>{{ ord.created }}</td>
+                                <td>{{ ord.id }}</td>
+                                <td>${{ ord.get_total_cost }}</td>
+                                <td><a href="{% url 'orders:unpaid_order_detail' ord.id%}" style="color: #0065cc">Click here to view details</a></td>
+                                <td><a href="{% url 'orders:unpaid_order_process' ord.id %}"><button type="button" class="btn btn-dark">Pay Now</button></a></td>
+                                <td><a href="{% url 'orders:unpaid_order_delete' ord.id %}"><button type="button" class="btn btn-dark">Cancel</button></a></td>
+                            </tr>
+                        {% endfor %}
+
+                        {% for ordp in paidorders %}
+                            <tr>
+                                <th scope="row">{{ forloop.counter }}</th>
+                                <td>{{ ordp.created }}</td>
+                                <td>{{ ordp.id }}</td>
+                                <td>${{ ordp.get_total_cost }}</td>
+                                <td><a href="{% url 'orders:unpaid_order_detail' ordp.id%}" style="color: #0065cc">Click here to view details</a></td>
+                                <td>Paid on {{ ordp.updated }}</td>
+                            </tr>
+                        {% endfor %}
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+          </div>
+        {% else %}
+            <h4 style="font-weight:bold;text-align:center">You have no orders {{ user.username }}</h4>   
+        {% endif %} 
+    </div>
+    
+  </div>
+
+        <p>
+        {% if user.groups.all.0.name == 'Instructors' %}
+            &nbsp;<a href="{% url 'courses:manage_course_list' %}"><button type="button" class="btn btn-dark">Your Courses</button></a>&nbsp;&nbsp;&nbsp;&nbsp;
+        {% else %}
+            &nbsp;<a href="{% url 'orders:student_course_list' %}"><button type="button" class="btn btn-dark">Your Courses</button></a>&nbsp;&nbsp;&nbsp;&nbsp; 
+        {% endif %}
+        <a href="{% url 'courses:name-change' %}"><button type="button" class="btn btn-dark">Name Change</button></a> <!--btn-outline-dark-->
+
+</div>
+ 
+{% endblock content %}
