@@ -172,12 +172,12 @@ MEDIA_ROOT = str(BASE_DIR.joinpath('media/'))  # user-uploaded files neeed / if 
 
 # Redirect to home URL after login (Default redirects to /accounts/profile/)
 #LOGIN_REDIRECT_URL = '/'
-#DEFAULT_FROM_EMAIL = 'wellsalgorithm@gmail.com'
+#DEFAULT_FROM_EMAIL = 'user@gmail.com'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 #EMAIL_HOST = 'smtp.gmail.com'
-#EMAIL_HOST_USER = 'wellsalgorithm@gmail.com'
-#EMAIL_HOST_PASSWORD = 'attract_77_mil'
+#EMAIL_HOST_USER = 'email@gmail.com'
+#EMAIL_HOST_PASSWORD = 'password'
 #EMAIL_PORT = 587
 #EMAIL_USE_TLS = True
 
